@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+- Author: Joshua Rodriguez
+- Contact: joshua_rodriguez@student.uml.edu
+- UMass Lowell student in GUI Programming 1 
+- Date Created: 11.02.2016
+- index page for containing a form that a user will fill out to display
+- a multiplication table
+
+- **UPDATE** Added jQuery CDN script + Validation PLUGIN
+- **UPDATE** Added jQuery UI CDN scripts, Slider Divs, Tab format, and delete button
+-->
+<html lang="en">
+
+   <head>
+      <title>Multiplication Table</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+   </head>
+
+   <body>
+
+      <div class="formContent">
+
+         <!--Instructions-->
+         <p class="instructions">Enter an interval below. There are four spaces provided. 
+            Enter one integer in each space to generate a table. Right click on a tab to
+            highlight it. Click delete to delete highlighted tabs.</p>
+
+         <!--form structure to enter in the desired intervals-->
+         <form id="tableForm">
+            <label>Multipliers From:</label>
+            <input type="text" name="multiplierFrom" id="one"/>
+            <div id="sliderFromFact1"> </div>
+
+            <label>Multipliers To:</label>
+            <input type="text" name="multiplierTo" id="two"/>
+            <div id="sliderToFact1"> </div>
+
+            <label>Multiplicands From:</label>
+            <input type="text" name="multiplicandFrom" id="three"/>
+            <div id="sliderFromFact2"> </div>
+
+            <label>Multiplicands To:</label>
+            <input type="text" name="multiplicandTo" id="four"/>
+            <div id="sliderToFact2"> </div>
+         </form>
+
+         <!--button that saves the dynamic table-->
+         <button id="save">Save Table</button>
+
+         <!--button that deletes selected tables-->
+         <button id="delete">Delete</button>
+
+      </div>
+
+      <!--skeleton structure to hold tables in tabs-->
+      <div class="tableContent">
+         <ul>
+            <li><a href="#currentTable">Current Table</a></li>
+         </ul>
+         <!--skeleton structure for javascript to populate a table-->
+         <div id="currentTable"></div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="js/jquery-validation-1.15.1/dist/jquery.validate.js"></script>
+      <script src="js/table.js"></script>
+
+   </body>
+
+</html>

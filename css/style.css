@@ -1,0 +1,122 @@
+/*
+* Author: Joshua Rodriguez
+* Contact: joshua_rodriguez@student.uml.edu
+* UMass Lowell student in GUI Programming 1 
+* Date Created: 11.02.2016
+* styling for basic form of the multiplication table page as well as the mult table
+*
+* **UPDATE** added css rule for error message
+* **UPDATE** added styling for sliders + tabs
+*/
+
+/*setting color for whole page background */
+body {
+   background-color: lightgreen;
+}
+
+/* separating form from table */
+.formContent {
+   width: 400px;
+   float: left;
+}
+
+
+/* button for saving the table styles */
+button {
+   background-color: lightgray;
+   font-size: 20px;
+   color: black;
+}
+
+/* styling form vertically */
+input {
+   border: 2.5px solid blue;
+   font-size: 15px;
+   display: block;
+   margin-bottom: auto;
+   width: 75px;
+}
+
+/* making labels a bit larger */
+label {
+   font-size: 20px;
+}
+
+/* Making instructions more distinguished */
+.instructions {
+   font-size: 22px;
+   margin-bottom: 30px;
+   margin-top: 30px;
+   color: darkslateblue;
+}
+
+/* positioning table */
+.tableContent {
+   float: left;
+   margin-top: 175px;
+   max-width: 800px;
+}
+
+/* making the multiplication style something interesting to look at */
+.multTable {
+   border: 2.5px double blue;
+}
+
+/* style for odd cell */
+tr:nth-child(odd) {
+   color: red;
+}
+
+/* style for every cell */
+td {
+   border: 2px solid black;
+   padding: 5px;
+}
+
+/* giving a different color sheme and style to multipliers and multiplicands */
+.tableHeaders{
+   background-color: white;
+   color: black;
+   font-style: oblique;
+}
+
+/*Error message styling*/
+.error {
+   font-size: 15px;
+   font-style: italic;
+   color: red;
+}
+
+
+/* fitting the sliders neatly underneath input boxes */
+#sliderFromFact1, #sliderToFact1, #sliderFromFact2, #sliderToFact2 {
+   width: 75px;
+   height: 5px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border: 2.5px solid blue;
+}
+
+
+/* changing color of all handles */
+#sliderFromFact1 .ui-slider-handle, #sliderToFact1 .ui-slider-handle, 
+#sliderFromFact2 .ui-slider-handle, #sliderToFact2 .ui-slider-handle {
+
+   background: darkgray;
+   height: 15px;
+}
+
+
+/* styling for tab head */
+.ui-tabs .ui-tabs-nav
+{
+   border-top: 2.5px solid blue;
+   border-right: 2.5px solid blue;
+   border-left: 2.5px solid blue;
+}
+
+
+/* giving overflow scroll for the horizontal aspect of the table */
+.ui-tabs .ui-tabs-panel {
+   overflow: scroll;
+}
